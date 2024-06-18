@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run KiCad Release Workflow
-        uses: ./ # or use the full path if it's a public action
+        uses: cronJ/kicad-release-workflow@v1
         with:
           project-name: "your_project_name"
           version: "1.0.0"
