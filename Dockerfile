@@ -2,7 +2,10 @@ FROM kicad/kicad:8.0
 
 USER root
 
-RUN apt update && RUN apt install -y zip
+RUN apt-get update \
+    && apt-get install -y zip \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /output
 
