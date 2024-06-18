@@ -1,0 +1,24 @@
+name: "KiCad Release Workflow"
+author: "Alexander Ransmann"
+description: "Generates a set of manufacturing files and attaches them to the release"
+inputs:
+  project-name:
+    description: "The KiCad project name"
+    required: true
+  version:
+    description: "The version for the filenames"
+    required: true
+  output-directory:
+    description: "The directory in which to place the manufacturing files"
+    required: false
+    default: "output"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.project-name }}
+    - ${{ inputs.version }}
+    - ${{ inputs.output-directory }}
+branding:
+  icon: "archive"
+  color: "orange"
