@@ -37,3 +37,5 @@ kicad-cli sch export pdf --output "$HOME/$outputDirectory/$today-$projectName-$v
 
 # BOM
 kicad-cli sch export bom --fields $BomFormat --exclude-dnp --output "$HOME/$outputDirectory/$today-$projectName-$version-BOM.csv" "$projectName.kicad_sch"
+
+ls -al $HOME/$outputDirectory
