@@ -1,10 +1,10 @@
 #!/bin/sh -l
 
-projectName = $1
-version = $2
-outputDirectory = $3
+projectName=$1
+version=$2
+outputDirectory=$3
 
-today = $(date +%F)
+today=$(date "+%F")
 
 echo "Project Name: $projectName"
 echo "Version: $version"
