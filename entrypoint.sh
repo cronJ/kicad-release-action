@@ -14,6 +14,8 @@ echo "Today: $today"
 mkdir -p $HOME/$outputDirectory
 mkdir -p $HOME/tempGerbers
 
+ls -al
+
 # Gerber files
 kicad-cli pcb export gerbers --no-protel-ext --output "$HOME/tempGerbers/" "$projectName.kicad_pcb"
 # Drill files
