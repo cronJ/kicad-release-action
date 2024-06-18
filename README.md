@@ -40,7 +40,7 @@ jobs:
 
 ```yaml
 - name: Run KiCad Release Workflow
-  uses: ./ # or use the full path if it's a public action
+  uses: cronJ/kicad-release-workflow@v1
   with:
     project-name: "my_kicad_project"
     version: "v1.2.3"
